@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+.container {
+    width: 1000px;
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+.container h1 {
+    text-align: right;
+    letter-spacing: 5px;
+    background-color: #0085b8;
+    color: white;
+}
+
+.container .content {
+    /* background: darkgray; */
+    display: grid;
+    grid-template-columns: 30% auto;
+    padding: 20px 0;
+}
+
+.info {
+    /* border: s1px solid gold; */
+    display: grid;
+    grid-template-rows: 10% 50% 30%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.info::before {
+    content: '';
+    position: absolute;
+    width: 75%;
+    left: 12%;
+    top: 10%;
+    background-color: #eaeaea;
+    height: 90%;
+    z-index: -1;
+    /* border-top-left-radius: 20%; */
+}
+
+.info::after {
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: 20%;
+    left: 12%;
+    top: 0;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: #eaeaea;
+}
+
+.info .img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.info .img img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.info ul li{
+    text-align: center;
+    margin: 20px 10px;
+}
+
+
+.first li:first-child {
+    margin-bottom: 50px;
+}
+.first p {
+    width: 80%;
+    margin: auto;
+}
+
+.info ul:first-child li:first-child {
+    margin-bottom: 100px;
+}
+
+.info li .heading {
+    color: #1c9cb6;
+}
+
+.info li i {
+    color: #1c9cb6;
+}
+
+
+.info ul:last-child li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info ul:last-child li p{
+    width: 30px;
+    margin-right: 100px;
+    margin-left: 10px;
+}
+.skills {
+    position: relative;
+}
+
+.skills::before {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 98%;
+    top: 2%;
+    /* padding: 20px 20px; */
+    /* display: grid; */
+    border-left: 2px solid rgb(0, 0, 0, 0.2);
+}
+
+
+.skills .box {
+    margin-bottom: 50px;
+}
+
+.slag {
+    padding-left: 20px;
+    color: #1c9cb6;
+    position: relative;
+}
+
+.slag::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    /* align-items: center; */
+    /* justify-content: center; */
+    background-color: rgb(0, 0, 0, 0.2);
+}
+
+
+.skills .box .content {
+    display: grid;
+    grid-template-rows: 20px 20px;
+    height: 15px;
+}
+
+.skills .box .content .title {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-bottom: 2px solid rgb(0, 0, 0, 0.2);
+    width: 300%;
+}
+
+
+.skills .box .content .infor {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.skills .box .content .title,
+.skills .box .content .infor{
+    display: grid;
+    grid-template-columns: 150px 200px 350px;    
+    text-align: center;
+    color: rgb(0, 0, 0, 0.6);
+}
+
+
+
+.skills .box .content .title .col-1,
+.skills .box .content .infor .col-1{
+    text-align: right;
+}
+
+.skills .box .content .title .col-2,
+.skills .box .content .title .col-3 {
+    color: #1c9cb6;
+    font-weight: 700;
+} 
+
+.program-award {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+.program-award .item {
+    margin: 5px 20px;
+}
+
+.program-award .item label {
+    display: inline-block;
+    width: 120px;
+}
+
+input[type = "radio"] {
+    accent-color:  rgb(0, 0, 0, 0.2);
+}
+
+.program-award .awards {
+    position: relative;
+}
+
+.program-award .awards::before {
+    content: '';
+    position: absolute;
+    top: 6%;
+    height: 90%;
+    border-left: 2px solid rgb(0, 0, 0, 0.2);
+}
+
+.program-award .awards .item {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.program-award .awards .item i{
+    font-size: 40px;
+    color: rgb(0, 0, 0, 0.2);
+    margin-right: 10px;
+}
+
+.lang-hobby {
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.lang-hobby .language .item{
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.lang-hobby .language .item .percent {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 20px;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+.lang-hobby .hobby {
+    position: relative;
+}
+
+.lang-hobby .hobby::before {
+    content: '';
+    position: absolute;
+    top: 4.5%;
+    height: 96%;
+    border-left: 2px solid rgb(0, 0, 0, 0.2);
+}
+
+.lang-hobby .hobby .list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 5%;
+}
+
+.lang-hobby .hobby .list .item {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+    height: 100px;
+    padding:0 10px;
+}
+
+
+.lang-hobby .hobby .list .item i{
+    width: 20px;
+    font-size: 30px;
+    color: rgb(0, 0, 0, 0.2);
+}
