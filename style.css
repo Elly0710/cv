@@ -1,9 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-li{
+li {
     list-style: none;
 }
 
@@ -11,6 +11,7 @@ li{
     width: 1000px;
     max-width: 100%;
     margin: 10px auto;
+    overflow: hidden;
 }
 
 .container h1 {
@@ -75,7 +76,7 @@ li{
     border-radius: 50%;
 }
 
-.info ul li{
+.info ul li {
     text-align: center;
     margin: 20px 10px;
 }
@@ -84,6 +85,7 @@ li{
 .first li:first-child {
     margin-bottom: 50px;
 }
+
 .first p {
     width: 80%;
     margin: auto;
@@ -102,17 +104,18 @@ li{
 }
 
 
-.info ul:last-child li{
+.info ul:last-child li {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.info ul:last-child li p{
+.info ul:last-child li p {
     width: 30px;
     margin-right: 100px;
     margin-left: 10px;
 }
+
 .skills {
     position: relative;
 }
@@ -169,12 +172,14 @@ li{
 .skills .box .content .infor {
     grid-row-start: 2;
     grid-row-end: 3;
+    width: 300%;
+
 }
 
 .skills .box .content .title,
-.skills .box .content .infor{
+.skills .box .content .infor {
     display: grid;
-    grid-template-columns: 150px 200px 350px;    
+    grid-template-columns: 150px 200px 350px;
     text-align: center;
     color: rgb(0, 0, 0, 0.6);
 }
@@ -182,7 +187,7 @@ li{
 
 
 .skills .box .content .title .col-1,
-.skills .box .content .infor .col-1{
+.skills .box .content .infor .col-1 {
     text-align: right;
 }
 
@@ -190,7 +195,7 @@ li{
 .skills .box .content .title .col-3 {
     color: #1c9cb6;
     font-weight: 700;
-} 
+}
 
 .program-award {
     display: grid;
@@ -207,8 +212,8 @@ li{
     width: 120px;
 }
 
-input[type = "radio"] {
-    accent-color:  rgb(0, 0, 0, 0.2);
+input[type="radio"] {
+    accent-color: rgb(0, 0, 0, 0.2);
 }
 
 .program-award .awards {
@@ -230,7 +235,7 @@ input[type = "radio"] {
     justify-content: center;
 }
 
-.program-award .awards .item i{
+.program-award .awards .item i {
     font-size: 40px;
     color: rgb(0, 0, 0, 0.2);
     margin-right: 10px;
@@ -241,7 +246,7 @@ input[type = "radio"] {
     grid-template-columns: 35% 65%;
 }
 
-.lang-hobby .language .item{
+.lang-hobby .language .item {
     padding: 10px;
     display: flex;
     text-align: center;
@@ -284,12 +289,113 @@ input[type = "radio"] {
     justify-content: left;
     gap: 20px;
     height: 100px;
-    padding:0 10px;
+    padding: 0 10px;
 }
 
 
-.lang-hobby .hobby .list .item i{
+.lang-hobby .hobby .list .item i {
     width: 20px;
     font-size: 30px;
     color: rgb(0, 0, 0, 0.2);
+}
+
+@media (max-width: 783px) {
+    .container {
+        width: 100%;
+        /* width: 100%; */
+    }
+
+    .container h1 {
+        width: 100%;
+    }
+
+    .container .content {
+        display: block;
+    }
+
+    .container .content .info::before,
+    .container .content .info::after {
+        display: none !important;
+    }
+
+    .container .content .info .first li:first-child {
+        display: none !important;
+        ;
+    }
+
+    .container .content .info {
+        grid-template-rows: unset;
+        grid-template-columns: 30% 30% 30%;
+        margin-bottom: 20px;
+    }
+
+    .container .content .info .img {
+        border-radius: 0;
+        background-color: #1c9cb6;
+    }
+
+    .container .content .info .img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0 !important;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 541px) {
+    .container h1 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .container .content .info {
+        grid-template-rows: unset;
+        grid-template-columns: unset;
+        /* background-color: red !important; */
+    }
+
+    .skills .box .content .title,
+    .skills .box .content .infor {
+        /* display: grid; */
+        grid-template-columns: 20% 20% 65%;
+        text-align: left;
+        color: rgb(0, 0, 0, 0.6);
+        font-size: 12px;
+    }
+
+    .skills .box .content .title .col-1,
+    .skills .box .content .infor .col-1 {
+        text-align: center;
+    }
+
+    .program-award {
+        grid-template-columns: unset;
+
+    }
+
+    .program-award .item p {
+        width: 60%  ;
+        /* text-align: left; */
+    }
+
+
+    .lang-hobby {
+        grid-template-columns: unset;
+    }
+    .lang-hobby .hobby .list {
+        column-gap: 0;
+    }
+
+    .lang-hobby .hobby .list .item{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 394px) {
+    .skills .box .content .title .col-2,
+    .skills .box .content .title .col-3 {
+        font-size: 10px;
+    }
+    
 }
