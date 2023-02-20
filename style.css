@@ -360,7 +360,7 @@ input[type="radio"] {
         grid-template-columns: 20% 20% 65%;
         text-align: left;
         color: rgb(0, 0, 0, 0.6);
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .skills .box .content .title .col-1,
@@ -393,8 +393,8 @@ input[type="radio"] {
 }
 
 @media (max-width: 394px) {
-    .skills .box .content .title .col-2,
-    .skills .box .content .title .col-3 {
+    .skills .box .content .title,
+    .skills .box .content .infor{
         font-size: 10px;
     }
     
